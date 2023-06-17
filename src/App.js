@@ -23,7 +23,7 @@ function App() {
           <Route path='/add-user' element={<Adduser/>} />
           <Route path='/pending-req' element={<PendingRequest/>} />
           <Route path='task' element={<Task/>} />
-          <Route path='*' element={<Dashboard/>} />
+          <Route path='*' element={<Navigate to='/dashboard'/>} />
         </Routes>
       </div>
     </BrowserRouter>
