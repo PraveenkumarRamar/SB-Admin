@@ -29,7 +29,7 @@ function Sidebar() {
                 <li className="nav-item">
                     <div className="nav-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
                         aria-expanded="true" aria-controls="collapseTwo">
-                        <i class="fa-solid fa-user-plus"></i>
+                        <i className="fa-solid fa-user-plus"></i>
                         <span>Add user</span>
                     </div>
                 </li>
@@ -39,7 +39,7 @@ function Sidebar() {
                 <li className="nav-item">
                     <div className="nav-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
                         aria-expanded="true" aria-controls="collapseTwo">
-                        <i class="fa-solid fa-user"></i>
+                        <i className="fa-solid fa-user"></i>
                         <span>Profile</span>
                     </div>
                 </li>
@@ -50,7 +50,7 @@ function Sidebar() {
                 <li className="nav-item" >
                     <div className="nav-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
                         aria-expanded="true" aria-controls="collapseTwo">
-                        <i class="fa-solid fa-rotate"></i>
+                        <i className="fa-solid fa-rotate"></i>
                         <span>Pending Request</span>
                     </div>
                 </li>
@@ -60,7 +60,7 @@ function Sidebar() {
                 <li className="nav-item" onClick={()=>nav('/task')}>
                     <div className="nav-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
                         aria-expanded="true" aria-controls="collapseTwo">
-                        <i class="fa-solid fa-list-check"></i>
+                        <i className="fa-solid fa-list-check"></i>
                         <span>Task</span>
                     </div>
                 </li>

@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect,useContext} from 'react'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useNavigate, useParams } from 'react-router-dom';
+import { userCont } from '../context/UserContextComponent';
 
-function AddUser({ users, setUsers }) {
+function AddUser() {
+    let usersContext = useContext(userCont)
 
     let navigate = useNavigate()
     let params = useParams()
@@ -16,7 +18,7 @@ function AddUser({ users, setUsers }) {
 
     let handleSubmit = () => {
         let newUser = { name, email, mobile, dob }
-        let newArray = [...users]
+        let newArray = [...usersContext.users]
         // newArray.push(newUser)
         // setUsers(newArray)
         if(params.id!==undefined){
@@ -24,7 +26,7 @@ function AddUser({ users, setUsers }) {
         }else{
             newArray.push(newUser)
         }
-        setUsers(newArray)
+        usersContext.setUsers(newArray)
         navigate('/dashboard')
     }
 
@@ -43,12 +45,12 @@ function AddUser({ users, setUsers }) {
 
         useEffect(()=>{
             if(params.id !== undefined){
-                setName(users[params.id].name)
-                setEmail(users[params.id].email)
-                setMobile(users[params.id].mobile)
-                setDob(users[params.id].dob)
+                setName(usersContext.users[params.id].name)
+                setEmail(usersContext.users[params.id].email)
+                setMobile(usersContext.users[params.id].mobile)
+                setDob(usersContext.users[params.id].dob)
             }
-        },[])
+        },[params.id,usersContext.users])
 
     return <>
         <div className='container-fluid'>
